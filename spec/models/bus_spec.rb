@@ -3,7 +3,7 @@ describe Bus do
     Timecop.return
   end
 
-  describe "#most_recent" do
+  describe "#next_bus" do
     let(:place) { "gotenyama" }
 
     context "19:25" do
@@ -13,7 +13,7 @@ describe Bus do
       end
 
       it "現在時刻の直近の時間が返る" do
-        expect(Bus.new(place).most_recent).to eq "19:30"
+        expect(Bus.new(place).next_bus).to eq "19:30"
       end
     end
 
@@ -24,7 +24,7 @@ describe Bus do
       end
 
       it "バスが無い" do
-        expect(Bus.new(place).most_recent).to eq "Bus is over."
+        expect(Bus.new(place).next_bus).to eq "Bus is over."
       end
     end
 
@@ -36,7 +36,7 @@ describe Bus do
         end
 
         it "次の時刻の直近の時間が返る" do
-          expect(Bus.new(place).most_recent).to eq "11:00"
+          expect(Bus.new(place).next_bus).to eq "11:00"
         end
       end
 
@@ -47,7 +47,7 @@ describe Bus do
         end
 
         it "バスが無い" do
-          expect(Bus.new(place).most_recent).to eq "Bus is over."
+          expect(Bus.new(place).next_bus).to eq "Bus is over."
         end
       end
     end

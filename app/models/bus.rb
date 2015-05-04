@@ -1,7 +1,7 @@
 class Bus < Busall
 
-  def most_recent
-    most_recent_bus_time
+  def next_bus
+    next_bus_time
   rescue BusIsOverError
     "Bus is over."
   end
@@ -23,7 +23,7 @@ class Bus < Busall
   #   end
   # end
   #
-  def most_recent_bus_time
+  def next_bus_time
     if current_hour_timetable.nil?
       raise BusIsOverError
     else
