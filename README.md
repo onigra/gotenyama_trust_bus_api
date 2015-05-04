@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/onigra/gotenyama_trust_bus_api.svg?branch=master)](https://travis-ci.org/onigra/gotenyama_trust_bus_api) [![Coverage Status](https://coveralls.io/repos/onigra/gotenyama_trust_bus_api/badge.svg?branch=master)](https://coveralls.io/r/onigra/gotenyama_trust_bus_api?branch=master) [![Code Climate](https://codeclimate.com/github/onigra/gotenyama_trust_bus_api/badges/gpa.svg)](https://codeclimate.com/github/onigra/gotenyama_trust_bus_api)
+
 # Gotenyama Trust Bus Api
 
 御殿山トラストシティのバスの時刻表を直近のバスの時間を返します。
