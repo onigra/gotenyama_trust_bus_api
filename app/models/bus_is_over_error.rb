@@ -1,0 +1,2 @@
+class BusIsOverError < StandardError
+end
