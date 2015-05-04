@@ -68,6 +68,8 @@ response:
 
 GET /busall/gotenyama
 
+status: 200
+response:
 {
   "7": [30, 45],
   "8": [0, 8, 15, 20, 25, 30, 35, 40, 45, 50, 55],
@@ -94,6 +96,8 @@ GET /busall/gotenyama
 
 GET /busall/shinagawa
 
+status: 200
+response:
 {
   "9": [12,32,52],
   "10": [12,32,52],
