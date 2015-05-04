@@ -1,3 +1,5 @@
+require "rails_helper"
+
 describe Busall do
   after :all do
     Timecop.return

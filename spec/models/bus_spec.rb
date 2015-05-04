@@ -1,3 +1,5 @@
+require "rails_helper"
+
 describe Bus do
   after :all do
     Timecop.return
