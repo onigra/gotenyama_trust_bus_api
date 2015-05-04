@@ -7,37 +7,61 @@
 
 http://www.mori-trust.co.jp/residence/gotenyamatrust/bus/
 
+リクエストを受けた時点の日時で平日か否かの判定を行っています。
+
 # Usage
 
-- 直近のバスの時刻を返す
+## 直近のバスの時刻を返す
+
+```
+GET /bus/:from_place
+```
+
+- 御殿山からのバス
 
 ```
 # 2015/5/11 19:25
 
 GET /bus/gotenyama
 
+status: 200
+response:
 {
   next: "19:30"
 }
+```
 
+- 品川からのバス
+
+```
 # 2015/5/4 16:02
 
 GET /bus/shinagawa
 
+status: 200
+response:
 {
   next: "16:14"
 }
+```
 
+- バスがもう無い場合
+
+```
 # 2015/5/4 3:00
 
 GET /bus/shinagawa
 
+status: 200
+response:
 {
   next: "Bus is over."
 }
 ```
 
-- 時刻表を返す
+## 時刻表を返す
+
+- 平日、御殿山発品川駅行き
 
 ```
 # 2015/5/11
@@ -61,7 +85,11 @@ GET /busall/gotenyama
   "20": [2, 12, 24, 39, 54],
   "21": [12, 32, 52]
 }
+```
 
+- 祝日、品川駅発御殿山行き
+
+```
 # 2015/5/4
 
 GET /busall/shinagawa
@@ -80,3 +108,10 @@ GET /busall/shinagawa
   "19": [13,32,52]
 }
 ```
+## Contributing
+
+1. Fork it ( http://github.com/onigra/gotenyama_trust_bus_api/fork )
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
