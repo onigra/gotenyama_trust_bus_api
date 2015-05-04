@@ -28,3 +28,7 @@ group :development, :test do
   gem "pry-remote"
   gem "pry-doc"
 end
+
+group :test do
+  gem 'coveralls', require: false
+end
