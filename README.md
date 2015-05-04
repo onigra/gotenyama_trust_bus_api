@@ -9,6 +9,10 @@ http://www.mori-trust.co.jp/residence/gotenyamatrust/bus/
 
 リクエストを受けた時点の日時で平日か否かの判定を行っています。
 
+# This application is hosting in Heroku
+
+https://floating-taiga-6784.herokuapp.com/
+
 # Usage
 
 ## 直近のバスの時刻を返す
