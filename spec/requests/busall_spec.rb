@@ -14,7 +14,7 @@ describe "Busallontroller", type: :request do
     describe "GET /busall/shinagawa" do
       before { get "/busall/shinagawa" }
 
-      it { expect(response.body).to be_json_as Timetables::FromShinagawa.weekday }
+      it { expect(response.body).to be_json_as("response" => Timetables::FromShinagawa.weekday) }
       it { expect(response).to have_http_status 200 }
     end
   end
@@ -23,7 +23,7 @@ describe "Busallontroller", type: :request do
     describe "GET /busall/gotenyama" do
       before { get "/busall/gotenyama" }
 
-      it { expect(response.body).to be_json_as Timetables::FromGotenyama.weekday }
+      it { expect(response.body).to be_json_as("response" => Timetables::FromGotenyama.weekday) }
       it { expect(response).to have_http_status 200 }
     end
   end
@@ -32,7 +32,7 @@ describe "Busallontroller", type: :request do
     describe "GET /busall/other" do
       before { get "/busall/other" }
 
-      it { expect(response.body).to be_json_as("message" => { "from_place" => ["Place is not found."] }) }
+      it { expect(response.body).to be_json_as("response" => { "from_place" => ["Place is not found."] }) }
       it { expect(response).to have_http_status 404 }
     end
   end

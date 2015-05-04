@@ -3,9 +3,9 @@ class BusallController < ApplicationController
     bus = Busall.new(params["from_place"])
 
     if bus.valid?
-      render json: bus.timetable, status: 200
+      render json: { response: bus.timetable }, status: 200
     else
-      render json: { message: bus.errors }, status: 404
+      render json: { response: bus.errors }, status: 404
     end
   end
 end
