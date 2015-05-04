@@ -31,10 +31,10 @@ class Bus < Busall
         if next_hour_timetable.nil?
           raise BusIsOverError
         else
-          "#{current_hour + 1}:#{next_hour_timetable.first}"
+          next_hour_bus
         end
       else
-        "#{current_hour}:#{current_hour_recent}"
+        current_hour_bus
       end
     end
   end
@@ -44,14 +44,36 @@ class Bus < Busall
   end
 
   def current_hour_timetable
-    timetable[@current_datetime.hour.to_s]
+    timetable[current_hour.to_s]
   end
 
   def next_hour_timetable
-    timetable[(@current_datetime.hour + 1).to_s]
+    timetable[(current_hour + 1).to_s]
   end
 
   def current_hour_recent
     current_hour_timetable.select { |i| i > @current_datetime.minute }.first
+  end
+
+  def next_hour_bus
+    DateTime.new(
+      @current_datetime.year,
+      @current_datetime.month,
+      @current_datetime.day,
+      (current_hour + 1),
+      next_hour_timetable.first,
+      0
+    ).strftime("%H:%M")
+  end
+
+  def current_hour_bus
+    DateTime.new(
+      @current_datetime.year,
+      @current_datetime.month,
+      @current_datetime.day,
+      current_hour,
+      current_hour_recent,
+      0
+    ).strftime("%H:%M")
   end
 end
