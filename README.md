@@ -11,7 +11,7 @@ http://www.mori-trust.co.jp/residence/gotenyamatrust/bus/
 
 # This application is hosting in Heroku
 
-https://floating-taiga-6784.herokuapp.com/
+https://floating-taiga-6784.herokuapp.com/busall/shinagawa
 
 # Usage
 
