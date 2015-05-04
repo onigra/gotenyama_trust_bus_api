@@ -19,6 +19,8 @@ class Bus
     "Bus is over."
   end
 
+  private
+
   #
   # if 現在時の時刻表が無い
   #   バスはもう無い
@@ -49,8 +51,6 @@ class Bus
       end
     end
   end
-
-  private
 
   def timetable
     "Timetables::From#{@from_place.capitalize}".constantize.send(date_type)
