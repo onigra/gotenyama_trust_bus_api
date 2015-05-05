@@ -14,6 +14,6 @@ class Busall
   end
 
   def timetable
-    "Timetables::From#{@from_place.capitalize}".constantize.send(date_type)
+    @timetable ||= "Timetables::From#{@from_place.capitalize}".constantize.send(date_type)
   end
 end
