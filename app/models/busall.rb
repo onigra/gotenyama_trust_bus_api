@@ -4,7 +4,7 @@ class Busall
 
   PLACE_LIST = ["shinagawa", "gotenyama"]
 
-  validates :from_place, inclusion: { in: PLACE_LIST, message: "Place is not found." }
+  validates :from_place, inclusion: { in: PLACE_LIST, message: "Invalid place. Valid place is gorenyama or shinagawa." }
 
   attr_accessor :from_place
 

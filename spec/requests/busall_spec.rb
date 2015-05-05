@@ -32,7 +32,7 @@ describe "Busallontroller", type: :request do
     describe "GET /busall/other" do
       before { get "/busall/other" }
 
-      it { expect(response.body).to be_json_as("response" => { "from_place" => ["Place is not found."] }) }
+      it { expect(response.body).to be_json_as("response" => { "from_place" => ["Invalid place. Valid place is gorenyama or shinagawa."] }) }
       it { expect(response).to have_http_status 404 }
     end
   end
