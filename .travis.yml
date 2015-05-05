@@ -2,3 +2,10 @@ language: ruby
 rvm: 2.2.2
 cache: bundler
 script: bundle exec rspec
+deploy:
+  provider: heroku
+  api_key:
+    secure: Jf5EwhrjCtHxy3mcRny4sXnfXDCPfThf2TfWjIZHxqR7HUVBfbV4qfT5m00YxgMfbxAgj78wp7zXqj3cBl2zORtCbFINcni6IUf2JJBrta21OgDnUx4HcH40K9OmTO0gdCuP8Bb4rUpBFTn4W/+1pzK5ohVqCtsN0E+lyV1Lbg4=
+  app: floating-taiga-6784
+  on:
+    repo: onigra/gotenyama_trust_bus_api
