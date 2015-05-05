@@ -2,7 +2,7 @@
 
 # Gotenyama Trust Bus Api
 
-御殿山トラストシティのバスの時刻表を直近のバスの時間を返します。
+御殿山トラストシティのバスの時刻表と、直近のバスの時間を返します。
 時刻表は下記をもとに作成しています。
 
 http://www.mori-trust.co.jp/residence/gotenyamatrust/bus/
@@ -64,6 +64,10 @@ response:
 ```
 
 ## 時刻表を返す
+
+```
+GET /busall/:from_place
+```
 
 - 平日、御殿山発品川駅行き
 
