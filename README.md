@@ -11,7 +11,17 @@ http://www.mori-trust.co.jp/residence/gotenyamatrust/bus/
 
 # This application is hosting in Heroku
 
-https://floating-taiga-6784.herokuapp.com/busall/shinagawa
+このリポジトリはmasterのCIが通ったら、自動で下記アプリにデプロイされます。
+
+https://floating-taiga-6784.herokuapp.com/
+
+### Herokuにホストする際の注意
+
+Timezoneを`Asia/Tokyo`にしておいてください。
+
+```sh
+$ heroku config:add TZ=Asia/Tokyo
+```
 
 # Usage
 
