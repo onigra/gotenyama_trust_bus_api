@@ -3,9 +3,9 @@ ruby "2.3.0"
 
 gem 'rails', '4.2.6'
 gem 'therubyracer', platforms: :ruby
-gem "awesome_print"
 gem "holiday_jp"
 gem "puma"
+gem "rambulance"
 
 group :development do
   gem "guard"
@@ -13,6 +13,7 @@ group :development do
   gem "guard-rspec"
   gem "growl"
   gem 'web-console', '~> 2.0'
+  gem "awesome_print"
 end
 
 group :development, :test do
