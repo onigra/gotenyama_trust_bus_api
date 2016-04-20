@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.3.0"
 
-gem 'rails', '4.2.1'
+gem 'rails', '4.2.6'
 gem 'therubyracer', platforms: :ruby
 gem "awesome_print"
 gem "holiday_jp"
@@ -12,11 +12,11 @@ group :development do
   gem "guard-rails"
   gem "guard-rspec"
   gem "growl"
+  gem 'web-console', '~> 2.0'
 end
 
 group :development, :test do
   gem 'byebug'
-  gem 'web-console', '~> 2.0'
   gem 'spring'
   gem "spring-commands-rspec"
   gem "rspec-rails"
