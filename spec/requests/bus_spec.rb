@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "Busallontroller", type: :request do
+describe "BusController", type: :request do
   after :all do
     Timecop.return
   end
@@ -43,6 +43,20 @@ describe "Busallontroller", type: :request do
       before { get "/bus/gotenyama" }
 
       it { expect(response.body).to be_json_as("response" => "19:30") }
+      it { expect(response).to have_http_status 200 }
+    end
+  end
+
+  context "After 2016-05-01 00:00:00 JST" do
+    before do
+      t = Time.local(2016, 5, 11, 19, 25, 0)
+      Timecop.travel t
+    end
+
+    describe "GET /bus/gotenyama" do
+      before { get "/bus/gotenyama" }
+
+      it { expect(response.body).to be_json_as("response" => "19:27") }
       it { expect(response).to have_http_status 200 }
     end
   end
