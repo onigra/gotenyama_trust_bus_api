@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "Busallontroller", type: :request do
+describe "BusController", type: :request do
   after :all do
     Timecop.return
   end
