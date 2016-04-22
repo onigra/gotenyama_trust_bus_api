@@ -14,6 +14,10 @@ class Busall
   end
 
   def timetable
-    @timetable ||= "Timetables::From#{@from_place.capitalize}".constantize.send(date_type)
+    if @current_datetime >= Time.zone.local(2016, 5, 1, 0, 0, 0).to_datetime
+      @timetable ||= "Timetables::NewFrom#{@from_place.capitalize}".constantize.send(date_type)
+    else
+      @timetable ||= "Timetables::From#{@from_place.capitalize}".constantize.send(date_type)
+    end
   end
 end
