@@ -56,6 +56,18 @@ describe Busall do
           expect(obj.timetable).to eq Timetables::FromShinagawa.holiday
         end
       end
+
+      context "after 2016-05-01 00:00:00 JST" do
+        before do
+          t = Time.zone.local(2016, 5, 1, 8, 0, 0)
+          Timecop.travel t
+        end
+
+        it "return new shinagawa holiday timetable" do
+          obj = Busall.new(place)
+          expect(obj.timetable).to eq Timetables::NewFromShinagawa.holiday
+        end
+      end
     end
 
     context "Gotenyama" do
@@ -106,6 +118,18 @@ describe Busall do
         it "return gotenyama holiday timetable" do
           obj = Busall.new(place)
           expect(obj.timetable).to eq Timetables::FromGotenyama.holiday
+        end
+      end
+
+      context "after 2016-05-01 00:00:00 JST" do
+        before do
+          t = Time.zone.local(2016, 5, 1, 0, 0, 0)
+          Timecop.travel t
+        end
+
+        it "return new shinagawa holiday timetable" do
+          obj = Busall.new(place)
+          expect(obj.timetable).to eq Timetables::NewFromGotenyama.holiday
         end
       end
     end
