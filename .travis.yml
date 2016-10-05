@@ -2,6 +2,8 @@ language: ruby
 rvm: 2.3.0
 cache: bundler
 script: bundle exec rspec
+before_install:
+  - gem install bundler
 deploy:
   provider: heroku
   api_key:
