@@ -15,7 +15,7 @@ describe Bus do
       end
 
       it "現在時刻の直近の時間が返る" do
-        expect(Bus.new(place).next_bus).to eq "19:30"
+        expect(Bus.new(place).next_bus).to eq "19:27"
       end
     end
 
