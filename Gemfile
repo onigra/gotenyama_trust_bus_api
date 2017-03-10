@@ -12,7 +12,6 @@ group :development do
   gem "guard-rails"
   gem "guard-rspec"
   gem "growl"
-  gem 'web-console', '~> 2.0'
   gem "awesome_print"
 end
 
