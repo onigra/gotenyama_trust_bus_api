@@ -32,6 +32,7 @@ end
 
 group :test do
   gem 'coveralls', require: false
+  gem 'scrutinizer-ocular', require: false
 end
 
 group :production do
