@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby "2.3.0"
+ruby "2.4.0"
 
-gem 'rails', '4.2.6'
+gem 'rails', '5.1.0beta1'
 gem 'therubyracer', platforms: :ruby
 gem "holiday_jp"
 gem "puma"
@@ -12,7 +12,6 @@ group :development do
   gem "guard-rails"
   gem "guard-rspec"
   gem "growl"
-  gem 'web-console', '~> 2.0'
   gem "awesome_print"
 end
 
