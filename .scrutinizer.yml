@@ -1,0 +1,8 @@
+checks:
+    ruby: true
+filter:
+    excluded_paths:
+        - 'spec/*'
+build:
+    environment:
+        ruby: '2.4.0'
